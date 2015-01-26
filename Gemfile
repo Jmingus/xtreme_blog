@@ -6,6 +6,7 @@ group :development, :test do
   gem "spring", "~> 1.2"
 end
 
+gem 'thin'
 gem "rails_12factor", "~> 0.0"
 gem "rails", "~> 4.2"
 gem "pg", "~> 0.18"
