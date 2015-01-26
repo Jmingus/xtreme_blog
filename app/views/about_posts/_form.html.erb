@@ -1,0 +1,22 @@
+<%= form_for(@about_post) do |f| %>
+  <% if @about_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@about_post.errors.count, "error") %> prohibited this about_post from being saved:</h2>
+
+      <ul>
+      <% @about_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+    <%= f.label :about_post, "New Blog Post" %><br>
+    <%= f.text_area :about_post, class: 'form-control', placeholder: 'New Content Here' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<%= form_for(@home_post) do |f| %>
+  <% if @home_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home_post.errors.count, "error") %> prohibited this home_post from being saved:</h2>
+
+      <ul>
+      <% @home_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :homepost, "New Blog Post" %><br>
+    <%= f.text_area :homepost, class: 'form-control', placeholder: "New Content Here" %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-default' %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+
+
+    <% @about_posts.each do |about_post| %>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>About Me</h3></div>
+      <div class="panel-body"><%= about_post.about_post %></div>
+    </div>
+    <button type="button" class="btn btn-default"><%= link_to 'New Post', new_about_post_path %> </button>
+    <button type="button" class="btn btn-default"><%= link_to 'Edit Post', edit_about_post_path(about_post) %></button>
+    <button type="button" class="btn btn-default"><%= link_to 'Delete Post', about_post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    <hr/>
+    <% end %>
+
+<br>
+
+

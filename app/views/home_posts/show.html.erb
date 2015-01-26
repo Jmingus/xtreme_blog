@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Homepost:</strong>
+  <%= @home_post.homepost %>
+</p>
+
+<%= link_to 'Edit', edit_home_post_path(@home_post) %> |
+<button type="button" class="btn btn-default"><%= link_to 'Back', root_path %></button>
